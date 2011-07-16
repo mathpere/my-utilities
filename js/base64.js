@@ -99,7 +99,7 @@ function Base64() {
 				dbunit += '\t&lt;row&gt;\n';
 				
 				dbunit += appendDbunitValue("id", idx);
-				dbunit += appendDbunitValue("version", 0);
+				dbunit += appendDbunitValue("version", 1);
 				dbunit += appendDbunitValue("dateAdded", day);
 				dbunit += appendDbunitValue("originalFilename", file.filename);
 				dbunit += appendDbunitValue("contentType", file.contentType);
