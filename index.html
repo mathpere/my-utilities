@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Utilities</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/github.css">
+	<link rel="stylesheet" type="text/css" href="css/base64.css">
+	<link rel="stylesheet" type="text/css" href="css/escapeutils.css">
+	<link rel="icon" href="images/icon-16.png" type="image/png"> 
+</head>
+<body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/analytics.js"></script>
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script type="text/javascript" src="js/strutil.js" ></script> 
+<script type="text/javascript" src="js/html-entities.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+
+<script type="text/javascript" src="js/base64.js"></script>
+<script type="text/javascript" src="js/escapeutils.js"></script>
+<script type="text/javascript" src="js/my-utilities.js"></script>
+
+<nav>
+	<h1 id="logo">My Utilities</h1>
+	<ul>
+		<li><a href="#escapeutils" class="active">Escape Utils</a></li>
+		<li><a href="#base64">Base64</a></li>
+	</ul>
+</nav>
+
+<section role="main">
+	<section id="escapeutils" class="main">
+		<h2>Escape Utils</h2>
+		
+<section>
+	    <h3>Plain text</h3><button class="copy" toCopy="eu-plainText">Copy</button>
+	    <textarea id="eu-plainText" escape="escapeToString" unescape="unescapeFromString" placeholder="Plain text" rows="3"></textarea>
+	</section>
+
+	<section>
+	    <h3>URL</h3><button class="copy" toCopy="eu-url">Copy</button>
+	    <textarea id="eu-url" escape="escapeToUrl" unescape="unescapeFromUrl" placeholder="URL" rows="3"></textarea>
+	</section>
+
+	<section>
+	    <h3>Base64</h3><button class="copy" toCopy="eu-base64">Copy</button>
+	    <textarea id="eu-base64" escape="escapeToBase64" unescape="unescapeFromBase64" placeholder="Base64" rows="3"></textarea>
+	</section>
+
+	<section>
+	    <h3>UTF-16</h3><button class="copy" toCopy="eu-utf-16">Copy</button>
+	    <textarea id="eu-utf-16" escape="escapeToUtf16" unescape="unescapeFromUtf16" placeholder="UTF-16" rows="3"></textarea>
+	</section>
+
+	<section>
+	    <h3>HTML</h3><button class="copy" toCopy="eu-html">Copy</button>
+	    <textarea id="eu-html" escape="escapeToHtml" unescape="unescapeFromHtml" placeholder="HTML" rows="3"></textarea>
+	</section>
+
+	<section>
+	    <h3>Javascript</h3><button class="copy" toCopy="eu-js">Copy</button>
+	    <textarea id="eu-js" escape="escape" unescape="unescape" placeholder="Javascript" rows="3"></textarea>
+	</section>
+	
+	</section>
+
+	<section id="base64" class="main hidden">
+		<h2>Base64</h2>
+		
+		<section class="advancedOptionsContainer">
+			<h3 class="advancedOptionsClosed">&#9654; <a href="javascript:void(0);">Edit advanced options</a></h3>
+			<h3 class="advancedOptionsOpened">&#9660; <a href="javascript:void(0);">Advanced options</a></h3>
+			<div class="advancedOptions">	
+			<p>
+				<label for="id">Id</label>
+				<input type="checkbox" name="id">
+				<input type="text" id="id-columnname" defaultValue="id">
+			</p>
+			<p>
+				<label for="version">Version</label>				
+				<input type="checkbox" name="version">
+				<input type="text" id="version-columnname" defaultValue="version">
+			</p>
+			<p>
+				<label for="dateAdded">Date Added</label>
+				<input type="checkbox" name="dateAdded">
+				<input type="text" id="dateAdded-columnname" defaultValue="date_added">
+			</p>
+			<p>
+				<label for="originalFilename">Original Filename</label>
+				<input type="checkbox" name="originalFilename">
+				<input type="text" id="originalFilename-columnname" defaultValue="original_filename">
+			</p>
+			<p>
+				<label for="contentType">Content Type</label>
+				<input type="checkbox" name="contentType">
+				<input type="text" id="contentType-columnname" defaultValue="content_type">
+			</p>
+			<p>
+				<label for="content">Content</label>
+				<input type="checkbox" name="content">
+				<input type="text" id="content-columnname" defaultValue="content">
+			</p>
+			<p>
+				<label for="fileSize">File Size</label>
+				<input type="checkbox" name="fileSize">
+				<input type="text" id="fileSize-columnname" defaultValue="file_size">
+			</p>
+			<p>
+				<label for="extension">Extension</label>
+				<input type="checkbox" name="extension">
+				<input type="text" id="extension-columnname" defaultValue="extension">			
+			</p>
+			</div>
+		</section>
+		
+		<section>
+			<div id="drop_zone">Drop files here</div>
+		</section>
+		
+		<section id="result">
+			<section>
+				<h3>Plain Base64</h3><button class="copy" toCopy="copy-plain">Copy</button>
+				<div id="plain" class="code"></div>
+				<textarea id="copy-plain" class="copyTarget"></textarea>
+			</section>
+		
+			<section>
+				<h3>DBUnit</h3><button class="copy" toCopy="copy-dbunit">Copy</button>
+				<div id="dbunit" class="code"></div>
+				<textarea id="copy-dbunit" class="copyTarget"></textarea>
+			</section>
+		
+			<section>
+				<h3>PostgresSQL</h3><button class="copy" toCopy="copy-postgresSQL">Copy</button>
+				<div id="postgresSQL" class="code"></div>
+				<textarea id="copy-postgresSQL" class="copyTarget"></textarea>
+			</section>
+		</section>
+	</section>
+</section>
+</body>
+</html>

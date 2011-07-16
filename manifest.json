@@ -1,0 +1,16 @@
+{
+  "name": "My Utilities",
+  "version": "1.0",
+  "description": "Some utilities (escaping, base64 encoding, etc.)",
+  "permissions": [
+    "notifications", "tabs"
+   ],
+  "background_page": "background.html",
+  "browser_action": {
+    "default_icon": "images/icon-16.png"
+  },
+  "icons": {
+    "128": "images/icon-128.png",
+    "16":"images/icon-16.png"
+  }
+}

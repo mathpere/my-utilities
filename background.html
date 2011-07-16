@@ -1,0 +1,24 @@
+<html>
+<body>
+<script type="text/javascript">
+	chrome.browserAction.onClicked.addListener(function(a){chrome.tabs.create({url:"index.html"})});
+	
+	chrome.extension.onRequest.addListener(function (msg, sender, sendResponse) {
+
+	      var textarea = document.getElementById("tmp-clipboard");
+
+	      // now we put the message in the textarea
+	      textarea.value = msg.text;
+
+	      // and copy the text from the textarea
+	      textarea.select();
+	      document.execCommand("copy", false, null);
+
+	      // finally, cleanup / close the connection
+	      sendResponse({});
+	    });
+</script>
+</script>
+<textarea id="tmp-clipboard"></textarea>
+</body>
+</html>

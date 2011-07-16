@@ -1,0 +1,21 @@
+#base64 #drop_zone{
+	border: 2px dashed #ccc;
+	border-radius: 5px;
+	padding: 55px;
+	margin: 20px 0px;
+	text-align: center;
+	font-size: 25px;
+	color: #ccc;
+}
+
+#base64 #result {	display: none; margin-top: 10px; }
+
+#base64 h3 { clear: both; float: left; }
+
+#base64 .copy{ float: right; }
+
+#base64 .code { clear: both; }
+
+#base64 .copyTarget { display: none; }
+
+#base64 .advancedOptions {clear: left;}
